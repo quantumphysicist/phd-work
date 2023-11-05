@@ -2,7 +2,7 @@
  Scripts created for PhD research. Updated for GitHub post-doctorate.
  
 ## File Descriptions <a name="files"></a>
-`compare_two_directories.ipynb`
+`compare_two_directories.ipynb`  
 Compares two directories and prints out the files that are in directory1 but not in directory2 and vice versa.
 
 `delete_empty_subdirectories.ipynb`  
