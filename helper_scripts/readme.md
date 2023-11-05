@@ -1,7 +1,6 @@
-# Teaching-Data-Science
- Materials created for teaching data science.  
-Please also see the [Supplementary Material for my YouTube Videos](https://github.com/quantumphysicist/YouTube-Videos_Data-Analysis-With-Python).
-
+# Helper Python Scripts
+ Scripts created for PhD research. Updated for GitHub post-doctorate.
+ 
 ## File Descriptions <a name="files"></a>
 
 `unzip_all_zip_files_verbose.py`
