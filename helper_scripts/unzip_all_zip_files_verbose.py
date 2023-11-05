@@ -2,7 +2,7 @@
 unzip_all_files_verbose.py
 
 Finds and extract all the zip files located in the current working directory.
-It provides verbose output, informing the user about each zip file as it is being
+Script provides verbose output i.e. informs the user about each zip file as it is being
 unzipped.
 
 Usage:
