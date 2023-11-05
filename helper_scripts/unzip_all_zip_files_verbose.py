@@ -1,3 +1,24 @@
+"""
+unzip_all_files_verbose.py
+
+Finds and extract all the zip files located in the current working directory.
+It provides verbose output, informing the user about each zip file as it is being
+unzipped.
+
+Usage:
+Simply run the script in a directory containing zip files. No command-line arguments are needed. The output
+will be displayed on the console.
+
+Example Output:
+    Unzipping example.zip...
+    Extracting file1.txt...
+    Extracting file2.jpg...
+    example.zip has been unzipped.
+    -------------
+    All zip files have been unzipped.
+    Press Enter key to exit the program.
+"""
+
 import os
 import zipfile
 
