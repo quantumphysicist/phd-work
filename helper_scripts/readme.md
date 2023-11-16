@@ -5,6 +5,9 @@
 `compare_two_directories.ipynb`  
 Compares two directories and prints out the files that are in `directory1` but not in `directory2` and vice versa.
 
+`compress_folder_to_tar_gz.py`
+Effortlessly create compressed tar.gz archives from any specified directory. The current working directory is the default.
+
 `delete_empty_subdirectories.ipynb`  
 Deletes all empty subdirectories in the current working directory.
 
