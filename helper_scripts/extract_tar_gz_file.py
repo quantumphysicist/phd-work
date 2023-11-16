@@ -48,3 +48,5 @@ with tarfile.open(tar_file_name, "r:gz") as tar:
         print(formatted_line)
 
 # The tar file will be closed automatically when exiting the 'with' block
+# Press any key to exit
+input("Press any key to exit...")
