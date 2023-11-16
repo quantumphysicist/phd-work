@@ -12,8 +12,9 @@ Effortlessly create compressed tar.gz archives from any specified directory. The
 Deletes all empty subdirectories in the current working directory.
 
 `extract_tar_gz_file.py`  
-Automates the extraction of tar files, handling cases where the file name is either provided via command line or automatically selected from the current directory. It includes validations for file existence and format, displays progress updates with file names, extraction percentages, and elapsed time during the extraction process.
-
+- Automates tar file extraction, with file name either provided via command line or auto-selected from the current directory.
+- Includes file existence and format validations, and displays progress with file names, extraction percentages, and elapsed time.
+  
 `list_folders_and_files_in_current_working_directory.ipynb`  
 Prints the directory structure starting from a given path. 
 It displays each directory and its files in a tree format with indentation representing the depth of each file or directory within the hierarchy. 
