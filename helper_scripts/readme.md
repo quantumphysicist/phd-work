@@ -22,6 +22,12 @@ It displays each directory and its files in a tree format with indentation repre
 `list_folders_and_files_in_current_working_directory.py`  
 Same as above but in a python script format.
 
+`search_for_string_in_pdfs.py`
+- Provides string search functionality in PDF files.
+- Includes two functions: search_in_pdf for single PDFs and search_in_directory for directory-wide searches.
+  - search_in_pdf outputs page number and context snippet of the found string.
+  - search_in_directory performs a recursive search in a specified directory and its subdirectories.
+
 `unzip_all_zip_files_verbose.py`  
 Finds and extract all the zip files located in the current working directory.
 Script provides verbose output i.e. informs the user about each zip file as it is being
