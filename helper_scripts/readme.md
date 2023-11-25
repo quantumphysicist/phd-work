@@ -22,7 +22,7 @@ It displays each directory and its files in a tree format with indentation repre
 `list_folders_and_files_in_current_working_directory.py`  
 Same as above but in a python script format.
 
-`search_for_string_in_pdfs.py`
+`search_for_string_in_pdfs.ipynb`
 - Provides string search functionality in PDF files.
 - Includes two functions: search_in_pdf for single PDFs and search_in_directory for directory-wide searches.
   - search_in_pdf outputs page number and context snippet of the found string.
