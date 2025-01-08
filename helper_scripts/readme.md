@@ -8,6 +8,11 @@ Compares two directories and prints out the files that are in `directory1` but n
 `compress_folder_to_tar_gz.py` 
 Effortlessly create compressed tar.gz archives from any specified directory. The current working directory is the default.
 
+`cut_out_pages_from_a_pdf.ipynb`  
+Allows users to extract specific pages from a PDF file.  
+- Users can define the pages to extract, saving them into a new PDF file.
+- Includes functionality for selecting a single range or multiple page ranges for extraction.
+
 `delete_empty_subdirectories.ipynb`  
 Deletes all empty subdirectories in the current working directory.
 
