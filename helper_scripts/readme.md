@@ -33,6 +33,10 @@ Same as above but in a python script format.
   - search_in_pdf outputs page number and context snippet of the found string.
   - search_in_directory performs a recursive search in a specified directory and its subdirectories.
 
+`trim_video_(keep_only_the_first_x_seconds_of_video).ipynb`
+ - Shows how to use MoviePy v2 to load video.mp4, cut the first 23 minutes 32 seconds (or the clip’s full length if it’s shorter) with the new subclipped method, and then save the result as trimmed_video.mp4.
+ - Also demonstrates re-encoding the output with H.264 video and AAC audio before cleanly closing resources.
+
 `unzip_all_zip_files_verbose.py`  
 Finds and extract all the zip files located in the current working directory.
 Script provides verbose output i.e. informs the user about each zip file as it is being
