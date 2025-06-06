@@ -21,8 +21,8 @@ Deletes all empty subdirectories in the current working directory.
 - Includes file existence and format validations, and displays progress with file names, extraction percentages, and elapsed time.
   
 `list_folders_and_files_in_current_working_directory.ipynb`  
-Prints the directory structure starting from a given path. 
-It displays each directory and its files in a tree format with indentation representing the depth of each file or directory within the hierarchy. 
+- Prints the directory structure starting from a given path. 
+- It displays each directory and its files in a tree format with indentation representing the depth of each file or directory within the hierarchy. 
 
 `list_folders_and_files_in_current_working_directory.py`  
 Same as above but in a python script format.
