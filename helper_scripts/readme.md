@@ -3,10 +3,10 @@
  
 ## File Descriptions <a name="files"></a>
 `compare_two_directories.ipynb`  
-Compares two directories and prints out the files that are in `directory1` but not in `directory2` and vice versa.
+- Compares two directories and prints out the files that are in `directory1` but not in `directory2` and vice versa.
 
 `compress_folder_to_tar_gz.py` 
-Effortlessly create compressed tar.gz archives from any specified directory. The current working directory is the default.
+- Effortlessly create compressed tar.gz archives from any specified directory. The current working directory is the default.
 
 `cut_out_pages_from_a_pdf.ipynb`  
 Allows users to extract specific pages from a PDF file.  
@@ -38,8 +38,8 @@ Same as above but in a python script format.
  - Also demonstrates re-encoding the output with H.264 video and AAC audio before cleanly closing resources.
 
 `unzip_all_zip_files_verbose.py`  
-Finds and extract all the zip files located in the current working directory.
-Script provides verbose output i.e. informs the user about each zip file as it is being
+- Finds and extract all the zip files located in the current working directory.
+- Script provides verbose output i.e. informs the user about each zip file as it is being
 unzipped.
 
 
