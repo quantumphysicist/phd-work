@@ -126,5 +126,3 @@ Install via:
 MIT Licence.
 
 ---
-
-If you want, I can also generate a `convert.bat` file for easy one-click launching, or a conda environment file (`environment.yml`) for reproducibility.
