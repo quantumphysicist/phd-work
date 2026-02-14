@@ -1,128 +1,123 @@
-# MP4-to-MP3 Conversion Script
+# MP4 to MP3 Converter
 
-A simple Python utility for converting `.mp4` files to `.mp3` audio. The script:
+A simple utility for converting MP4 video files to MP3 audio format using GPU-accelerated ffmpeg.
 
-1. Attempts to import **PyDub**.
-2. If the import fails, it instructs the user to switch to the correct conda environment.
-3. Recommends using a **GPU-accelerated ffmpeg command** for maximum performance.
-4. Gives the user the option to **continue with PyDub** or **exit**.
-5. Automatically finds the first `.mp4` file in the current directory and converts it to `.mp3`.
+## Quick Start (Recommended)
 
----
+### Using the Batch File
 
-## Features
+The easiest method - simply double-click `convert.bat`:
 
-* Environment-aware: instructs the user to activate the correct conda environment (“digital”) if PyDub is unavailable.
-* Optional early-exit path, allowing the user to switch to a more efficient ffmpeg-based workflow.
-* Automatic detection of the first `.mp4` file in the working directory.
-* Conversion handled using **PyDub**, which internally relies on ffmpeg.
+1. Ensure your input file is named `INPUT.mp4` (or edit the batch file with your filename)
+2. Double-click `convert.bat`
+3. Wait for the conversion to complete
+4. Your converted audio will be saved as `OUTPUT.mp3`
 
----
+The batch file uses GPU-accelerated ffmpeg with CUDA for fast, high-quality conversion:
 
-## Recommended Conversion (Fastest Method)
-
-For high-quality and GPU-accelerated conversion, it is recommended to use ffmpeg directly:
-
-```
+```batch
 ffmpeg -hwaccel cuda -hwaccel_output_format cuda -i "INPUT.mp4" -vn -acodec libmp3lame -q:a 2 "OUTPUT.mp3"
 ```
 
-This bypasses Python entirely and typically delivers **significantly faster** processing when a CUDA-capable GPU is available.
+**Parameters explained:**
+- `-hwaccel cuda` - Use NVIDIA GPU acceleration
+- `-hwaccel_output_format cuda` - Keep data on GPU
+- `-vn` - Strip video, keep only audio
+- `-acodec libmp3lame` - Use high-quality MP3 encoder
+- `-q:a 2` - High quality audio (scale: 0-9, lower is better)
 
 ---
 
-## Python-Based Conversion (PyDub)
+## Alternative Method: Python Script
 
-If you choose to continue with the Python script, it will:
+If you prefer a more flexible Python-based approach, use `convert-mp4-to-mp3.py`.
 
-1. Confirm that PyDub is available.
-2. Ask whether you want to continue with PyDub instead of ffmpeg.
-3. Locate the first `.mp4` file in the current directory.
-4. Convert it to `.mp3` using PyDub.
+### Features
+
+- Environment checking (requires PyDub)
+- Automatic detection of the first `.mp4` file in the directory
+- User prompts and error handling
+- Works on systems without CUDA support
+
+### Requirements
+
+- Python 3.8+
+- PyDub: `pip install pydub` or use conda environment "digital"
+- ffmpeg installed and in PATH
+
+### Usage
+
+```bash
+python convert-mp4-to-mp3.py
+```
+
+The script will:
+1. Check if PyDub is available
+2. Suggest using the faster ffmpeg method
+3. Allow you to continue with PyDub if you prefer
+4. Find and convert the first `.mp4` file automatically
 
 ---
 
 ## Requirements
 
-### Python Dependencies
+### For Batch File Method
+- Windows OS
+- ffmpeg installed with CUDA support
+- NVIDIA GPU with CUDA drivers
 
-* Python 3.8+
-* `pydub`
-* `ffmpeg` installed on your system and available in PATH
+### For Python Method
+- Python 3.8+
+- ffmpeg
+- PyDub library
 
-### Conda Environment
+---
 
-The script assumes you have a conda environment named **digital** that contains PyDub.
-If the import fails, the script prints:
+## Installation
 
+### Install ffmpeg
+
+**Windows:**
+1. Download from [ffmpeg.org](https://ffmpeg.org/download.html)
+2. Extract and add to PATH
+3. For CUDA support, ensure you have NVIDIA GPU drivers installed
+
+**Conda:**
+```bash
+conda install -c conda-forge ffmpeg
 ```
-Please switch to the "digital" environment using conda (pydub is not installed here).
+
+### Install Python Dependencies
+
+```bash
+pip install pydub
 ```
 
-You can activate this environment using:
-
-```
+Or activate the conda environment:
+```bash
 conda activate digital
-```
-
----
-
-## Usage
-
-1. Place your `.mp4` file in the same directory as the script.
-2. Run the script:
-
-```
-python convert.py
-```
-
-3. When prompted:
-
-   * Enter **y** to use PyDub for conversion.
-   * Enter **n** to exit and use the ffmpeg command manually instead.
-
-4. If you proceed, the script will generate an `.mp3` file with the same base name.
-
----
-
-## Example Output
-
-```
-Note: For fastest and highest-quality conversion, you may prefer to use FFMPEG directly:
-    ffmpeg -hwaccel cuda -hwaccel_output_format cuda -i "INPUT.mp4" -vn -acodec libmp3lame -q:a 2 "OUTPUT.mp3"
-
-Would you like to continue with the PyDub conversion instead? (y/n): y
-Successfully converted example.mp4 to example.mp3
 ```
 
 ---
 
 ## Troubleshooting
 
-### PyDub import error
+**Batch file doesn't run:**
+- Check that ffmpeg is in your PATH: `ffmpeg -version`
+- Verify CUDA drivers are installed: `nvidia-smi`
+- Ensure input file is named correctly
 
-You are not in the correct conda environment. Run:
+**Python script fails:**
+- Activate correct environment: `conda activate digital`
+- Install PyDub: `pip install pydub`
+- Verify ffmpeg is installed: `ffmpeg -version`
 
-```
-conda activate digital
-```
-
-### No .mp4 files found
-
-Ensure your input file is in the same directory as the script.
-
-### ffmpeg not found
-
-Install via:
-
-* Conda: `conda install -c conda-forge ffmpeg`
-* Homebrew (macOS): `brew install ffmpeg`
-* Windows: Install from [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html) and add to PATH.
+**No .mp4 files found:**
+- Place your MP4 file in the same directory as the script
+- For batch file: rename to `INPUT.mp4` or edit the batch file
 
 ---
 
-## Licence
+## License
 
-MIT Licence.
-
----
+MIT License
